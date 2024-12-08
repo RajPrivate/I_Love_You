@@ -31,3 +31,10 @@ function moveSlider(direction) {
 // Attach event listeners to buttons
 nextBtn.addEventListener('click', () => moveSlider('next'));
 prevBtn.addEventListener('click', () => moveSlider('prev'));
+
+document.body.addEventListener('click', function () {
+        const audio = document.getElementById('background-audio');
+        audio.play().catch(error => {
+            console.error('Autoplay failed:', error);
+        });
+    });
